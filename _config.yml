@@ -1,18 +1,4 @@
 theme: jekyll-theme-minimal
 title: Predictable or Not ?
 description: ADA Project of the best team
-show_downloads: True
-
-navigation:
-  - title: Accueil
-    url: /
-  - title: Genre
-    url: /genre
-  - title: Chronologie
-    url: /timeline
-  - title: Réalisateurs
-    url: /directors
-  - title: Succès
-    url: /success
-  - title: Fins par pays
-    url: /countries
+show_downloads: False
