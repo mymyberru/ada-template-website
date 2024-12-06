@@ -2,8 +2,17 @@ theme: jekyll-theme-minimal
 title: Predicatble or Not ?
 description: Predicatble or Not ?
 show_downloads: True
+
 navigation:
-  - title: Home
+  - title: Accueil
     url: /
-  - title: Example
-    url: example
+  - title: Genre
+    url: /genre
+  - title: Chronologie
+    url: /timeline
+  - title: Réalisateurs
+    url: /directors
+  - title: Succès
+    url: /success
+  - title: Fins par pays
+    url: /countries
