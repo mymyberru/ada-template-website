@@ -1,9 +1,5 @@
 
 
-<header>
-
-
-
 # Bienvenue dans "Voyage à travers les fins de films"
 
 Plongez dans l'univers des films et explorez comment les genres, les époques et les cultures influencent les fins. Cliquez sur les étapes ci-dessous pour commencer :
