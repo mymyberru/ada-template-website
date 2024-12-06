@@ -1,10 +1,9 @@
+
+
 <header>
   <h1>Voyage à travers les fins de films</h1>
 </header>
 
----
-layout: default
----
 
 # Bienvenue dans "Voyage à travers les fins de films"
 
