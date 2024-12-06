@@ -1,5 +1,5 @@
 header {
-  background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.8)), url('https://img.freepik.com/photos-gratuite/collage-fond-film_23-2149876007.jpg?semt=ais_hybrid');
+  background-image: url('https://img.freepik.com/photos-gratuite/collage-fond-film_23-2149876007.jpg?semt=ais_hybrid');
   background-size: cover;
   background-position: center;
   height: 350px;
