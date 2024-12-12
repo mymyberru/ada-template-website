@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mission: Happy Endings</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Agence des Fins de Films</h1>
+        <h2>Mission: Happy Endings – Une enquête sur les mystères des fins de films</h2>
+    </header>
+    <main>
+        <section id="intro" class="section">
+            <h3>Le Briefing de l'Agence</h3>
+            <p>Agent Cinéphile, nous avons une mission critique pour vous...</p>
+            <button onclick="nextSection('dossier1')">Commencer l'enquête</button>
+        </section>
+
+        <section id="dossier1" class="section hidden">
+            <h3>Dossier 001 – Les genres et leurs conventions suspectes</h3>
+            <p>Les genres sont des créatures d’habitude...</p>
+            <button onclick="nextSection('dossier2')">Passer au dossier suivant</button>
+        </section>
+
+        <section id="dossier2" class="section hidden">
+            <h3>Dossier 002 – Les époques et leurs secrets bien gardés</h3>
+            <p>En fouillant les archives des années 1950...</p>
+            <button onclick="nextSection('dossier3')">Passer au dossier suivant</button>
+        </section>
+
+        <section id="dossier3" class="section hidden">
+            <h3>Dossier 003 – Les complices : acteurs et réalisateurs</h3>
+            <p>Ah, Christopher Nolan, un récidiviste des fins ambiguës...</p>
+            <button onclick="nextSection('dossier4')">Passer au dossier suivant</button>
+        </section>
+
+        <section id="dossier4" class="section hidden">
+            <h3>Dossier 004 – Le mobile du crime : succès et argent</h3>
+            <p>Suivez l’argent. Les happy endings rapportent gros...</p>
+            <button onclick="nextSection('dossier5')">Passer au dossier suivant</button>
+        </section>
+
+        <section id="dossier5" class="section hidden">
+            <h3>Dossier 005 – Les différences culturelles</h3>
+            <p>Bollywood adore ses fins heureuses...</p>
+            <button onclick="nextSection('dossier6')">Passer au dossier suivant</button>
+        </section>
+
+        <section id="dossier6" class="section hidden">
+            <h3>Dossier 006 – Les franchises et les films longs</h3>
+            <p>Hollywood a un modus operandi : garder les spectateurs accrochés...</p>
+            <button onclick="nextSection('conclusion')">Passer à la conclusion</button>
+        </section>
+
+        <section id="conclusion" class="section hidden">
+            <h3>L'épilogue</h3>
+            <p>Mission accomplie, Agent Cinéphile. Vous avez levé le voile...</p>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
