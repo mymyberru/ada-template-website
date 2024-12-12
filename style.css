@@ -78,17 +78,6 @@ main a:hover {
   color: #654321; /* Brun foncé pour un effet de survol */
 }
 
-/* Reset styles for body and html */
-html, body {
-    margin: 0;
-    padding: 0;
-    height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
-}
 
 
 /* Style de la barre fixe */
