@@ -128,6 +128,21 @@
             text-decoration: none;
             font-size: 18px;
         }
+        .menu-overlay {
+            display: none; /* Caché par défaut */
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5); /* Overlay semi-transparent */
+            z-index: 1500; /* Juste en dessous du menu */
+        }
+
+        .menu.show + .menu-overlay {
+            display: block; /* Affiché lorsque le menu est ouvert */
+        }
+
 
         /* Effect when the menu is visible */
         .menu.show {
@@ -188,6 +203,7 @@
     </div>
 
     <!-- Hidden menu -->
+    <div id="menu-overlay" class="menu-overlay"></div>
     <div id="menu" class="menu">
         <ul>
             <li><a href="#intro">Agency Briefing</a></li>
@@ -200,6 +216,7 @@
             <li><a href="#conclusion">The Epilogue</a></li>
         </ul>
     </div>
+
 
     <header class="header">
         <img src="assets/img/header_1.png" alt="Header Banner" class="header-img">
@@ -316,26 +333,35 @@
             }
         };
 
-        // Function to toggle the menu visibility
         function toggleMenu() {
             const menu = document.getElementById('menu');
-            menu.classList.toggle('show');
+            const overlay = document.getElementById('menu-overlay');
+        
+            // Toggle the menu and overlay
+            const isVisible = menu.classList.toggle('show');
+            overlay.style.display = isVisible ? 'block' : 'none';
         }
         
-        // Function to scroll the page to the corresponding section
-        document.querySelectorAll('.menu a').forEach(anchor => {
-            anchor.addEventListener('click', function(e) {
-                e.preventDefault();
-
-                // Close the menu after clicking
-                document.getElementById('menu').classList.remove('show');
-
-                // Scroll the page to the target section
-                document.querySelector(this.getAttribute('href')).scrollIntoView({
-                    behavior: 'smooth'
-                });
+        // Close the menu when clicking on the overlay
+        document.getElementById('menu-overlay').addEventListener('click', () => {
+            const menu = document.getElementById('menu');
+            const overlay = document.getElementById('menu-overlay');
+        
+            menu.classList.remove('show');
+            overlay.style.display = 'none';
+        });
+        
+        // Optional: Close the menu when clicking on a menu link
+        document.querySelectorAll('.menu a').forEach(link => {
+            link.addEventListener('click', () => {
+                const menu = document.getElementById('menu');
+                const overlay = document.getElementById('menu-overlay');
+        
+                menu.classList.remove('show');
+                overlay.style.display = 'none';
             });
         });
+
     </script>
 
 </body>
