@@ -47,6 +47,47 @@
             background-color: #333; /* Couleur de fond quand on défile */
         }
 
+        /* Icône du menu à droite */
+        .menu-icon {
+            font-size: 30px;
+            cursor: pointer;
+            position: absolute;
+            right: 20px; /* Espace à droite */
+        }
+
+        /* Menu caché */
+        .menu {
+            display: none;
+            position: fixed;
+            top: 0;
+            right: 0;
+            background-color: #444;
+            width: 200px;
+            height: 100%;
+            padding-top: 50px;
+        }
+
+        .menu ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .menu li {
+            padding: 15px;
+            border-bottom: 1px solid #ddd;
+        }
+
+        .menu li a {
+            color: white;
+            text-decoration: none;
+            font-size: 18px;
+        }
+
+        /* Effet quand le menu est visible */
+        .menu.show {
+            display: block;
+        }
+
         /* Le reste du contenu de la page */
         header {
             background-color: #444;
@@ -74,24 +115,24 @@
 <body>
 
     <div class="top-bar">
-    <i class="fas fa-clapperboard logo"></i>
-    <p>Mission Ada : Done by the BigDada team</p>
-    <i class="fas fa-bars menu-icon" onclick="toggleMenu()"></i>
-</div>
+        <i class="fas fa-clapperboard logo"></i>
+        <p>Mission Ada : Done by the BigDada team</p>
+        <i class="fas fa-bars menu-icon" onclick="toggleMenu()"></i>
+    </div>
 
-<!-- Menu caché -->
-<div id="menu" class="menu">
-    <ul>
-        <li><a href="#intro">Le Briefing de l'Agence</a></li>
-        <li><a href="#dossier1">Dossier 001 – Les genres et leurs conventions suspectes</a></li>
-        <li><a href="#dossier2">Dossier 002 – Les époques et leurs secrets bien gardés</a></li>
-        <li><a href="#dossier3">Dossier 003 – Les complices : acteurs et réalisateurs</a></li>
-        <li><a href="#dossier4">Dossier 004 – Le mobile du crime : succès et argent</a></li>
-        <li><a href="#dossier5">Dossier 005 – Les différences culturelles</a></li>
-        <li><a href="#dossier6">Dossier 006 – Les franchises et les films longs</a></li>
-        <li><a href="#conclusion">L'épilogue</a></li>
-    </ul>
-</div>
+    <!-- Menu caché -->
+    <div id="menu" class="menu">
+        <ul>
+            <li><a href="#intro">Le Briefing de l'Agence</a></li>
+            <li><a href="#dossier1">Dossier 001 – Les genres et leurs conventions suspectes</a></li>
+            <li><a href="#dossier2">Dossier 002 – Les époques et leurs secrets bien gardés</a></li>
+            <li><a href="#dossier3">Dossier 003 – Les complices : acteurs et réalisateurs</a></li>
+            <li><a href="#dossier4">Dossier 004 – Le mobile du crime : succès et argent</a></li>
+            <li><a href="#dossier5">Dossier 005 – Les différences culturelles</a></li>
+            <li><a href="#dossier6">Dossier 006 – Les franchises et les films longs</a></li>
+            <li><a href="#conclusion">L'épilogue</a></li>
+        </ul>
+    </div>
 
     <header>
         <h1>Agence des Fins de Films</h1>
@@ -150,7 +191,7 @@
                 topBar.classList.remove('scrolled'); // Enlève la classe quand on est en haut de la page
             }
         };
-    
+
         // Fonction pour basculer l'affichage du menu
         function toggleMenu() {
             const menu = document.getElementById('menu');
@@ -161,10 +202,10 @@
         document.querySelectorAll('.menu a').forEach(anchor => {
             anchor.addEventListener('click', function(e) {
                 e.preventDefault();
-        
+
                 // Fermer le menu après clic
                 document.getElementById('menu').classList.remove('show');
-        
+
                 // Faire défiler la page vers la section cible
                 document.querySelector(this.getAttribute('href')).scrollIntoView({
                     behavior: 'smooth'
