@@ -4,7 +4,6 @@ header {
     color: #fff;
     text-align: center;
     padding: 20px;
-    position: fixed; /* Fixe le header */
     top: 0; /* L'ancre en haut de la page */
     left: 0;
     right: 0;
