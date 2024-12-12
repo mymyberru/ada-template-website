@@ -1,14 +1,4 @@
 
-header {
-    background-color: #444;
-    color: #fff;
-    text-align: center;
-    padding: 20px;
-    top: 0; /* L'ancre en haut de la page */
-    left: 0;
-    right: 0;
-    z-index: 1000;
-
 h1 {
     margin-bottom: 10px; /* Ajout d'un espace entre le titre et le sous-titre */
 }
