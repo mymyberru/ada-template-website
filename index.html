@@ -103,8 +103,6 @@
             display: block;
         }
 
-        
-
         section {
             padding: 20px;
             background: #fff;
@@ -115,6 +113,45 @@
         h3 {
             color: #444;
         }
+
+        .team {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+            margin-top: 30px;
+        }
+
+        .team-member {
+            width: 200px;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        
+        .team-member img {
+            width: 100%;
+            border-radius: 10px;
+            transition: transform 0.3s;
+        }
+        
+        .team-member img:hover {
+            transform: scale(1.1);
+        }
+        
+        .left {
+            margin-left: 20px;
+        }
+        
+        .right {
+            margin-right: 20px;
+        }
+        
+        h2 {
+            text-align: center;
+            margin-top: 50px;
+            font-size: 2rem;
+        }
+
     </style>
 </head>
 <body>
@@ -175,25 +212,30 @@
             <p>Before you embark on this adventure, allow us to introduce the team of detectives who have meticulously prepared this investigation. We are the "Data-ective" team, a group of movie enthusiasts, data experts, and mystery solvers, ready to crack the greatest secrets of the film world. Let us guide you through this cinematic journey!</p>
         
             <div class="team">
-                <div class="member">
+                <div class="team-member left">
                     <img src="image1.jpg" alt="Member 1">
                     <h3>Jane Doe</h3>
                     <p>Lead Investigator - Specialist in cinematic genres and historical trends in film endings.</p>
                 </div>
-                <div class="member">
+                <div class="team-member right">
                     <img src="image2.jpg" alt="Member 2">
                     <h3>John Smith</h3>
                     <p>Data Scientist - Expert in analyzing data and commercial trends in cinema.</p>
                 </div>
-                <div class="member">
+                <div class="team-member left">
                     <img src="image3.jpg" alt="Member 3">
                     <h3>Alice Johnson</h3>
                     <p>Cultural Analyst - Passionate about international cinema and cultural differences in movie endings.</p>
                 </div>
-                <div class="member">
+                <div class="team-member right">
                     <img src="image4.jpg" alt="Member 4">
                     <h3>Bob Lee</h3>
                     <p>Chief Detective - Responsible for researching franchises and the impact of "happy endings".</p>
+                </div>
+                <div class="team-member left">
+                    <img src="image5.jpg" alt="Member 5">
+                    <h3>Charlie Brown</h3>
+                    <p>Assistant Detective - Expert in the intersection of commercial success and storytelling.</p>
                 </div>
             </div>
         
