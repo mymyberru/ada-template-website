@@ -5,6 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mission: Happy Endings</title>
     <link rel="stylesheet" href="style.css">
+
+    <!-- Ajout de Font Awesome pour les icônes -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -26,6 +30,16 @@
             width: 100%;
             z-index: 1000;
             transition: background-color 0.3s ease-in-out; /* Transition douce pour le changement de couleur */
+            display: flex;
+            justify-content: center; /* Centrer le texte et les éléments */
+            align-items: center;
+        }
+
+        /* Logo à gauche de la barre */
+        .top-bar .logo {
+            position: absolute;
+            left: 20px; /* Espace à gauche */
+            font-size: 24px; /* Taille de l'icône */
         }
 
         /* Style pour la barre quand on défile */
@@ -60,6 +74,7 @@
 <body>
     <!-- La barre qui reste en haut pendant le défilement -->
     <div class="top-bar">
+        <i class="fas fa-clapperboard logo"></i> <!-- Icône de clap de cinéma -->
         <p>Barre fixe - Reste en haut lors du défilement</p>
     </div>
 
