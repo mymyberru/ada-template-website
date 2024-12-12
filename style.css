@@ -75,3 +75,57 @@ main a:hover {
   text-decoration: underline;
   color: #654321; /* Brun foncé pour un effet de survol */
 }
+
+/* Style de la barre fixe */
+.top-bar {
+    background-color: rgba(0, 0, 0, 0.8);
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #fff;
+    z-index: 100;
+}
+
+.menu-icon {
+    font-size: 30px;
+    cursor: pointer;
+}
+
+/* Menu caché */
+.menu {
+    display: none;
+    position: fixed;
+    top: 0;
+    right: 0;
+    background-color: #444;
+    width: 200px;
+    height: 100%;
+    padding-top: 50px;
+}
+
+.menu ul {
+    list-style: none;
+    padding: 0;
+}
+
+.menu li {
+    padding: 15px;
+    border-bottom: 1px solid #ddd;
+}
+
+.menu li a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+/* Effet lorsque le menu est visible */
+.menu.show {
+    display: block;
+}
+
