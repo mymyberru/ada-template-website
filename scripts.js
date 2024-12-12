@@ -1,19 +1,3 @@
-// Load the sections 
-document.addEventListener("DOMContentLoaded", function () {
-    // Fonction pour charger un fichier HTML et l'insérer dans l'élément ciblé
-    function loadSection(sectionId, filePath) {
-        fetch(filePath)
-            .then(response => response.text())
-            .then(data => document.getElementById(sectionId).innerHTML = data)
-            .catch(error => console.log('Erreur de chargement:', error));
-    }
-
-    // Load each sections 
-    
-    loadSection('files1', 'sections/files1.html');
-    loadSection('files2', 'sections/files2.html');
-    loadSection('conclusion', 'sections/conclusion.html');
-});
 
 
 // Adding an event to detect when the page is scrolled
