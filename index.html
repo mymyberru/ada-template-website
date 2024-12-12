@@ -6,7 +6,6 @@
     <title>Mission: Happy Endings</title>
     <link rel="stylesheet" href="style.css">
     <style>
-        /* Ajout d'un style rapide si nécessaire */
         body {
             font-family: Arial, sans-serif;
             margin: 0;
@@ -15,11 +14,26 @@
             color: #333;
         }
 
+        /* Style pour la barre fixe */
+        .top-bar {
+            background-color: #333; /* Couleur de fond de la barre */
+            color: #fff;
+            text-align: center;
+            padding: 10px;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 1000; /* Pour qu'elle reste au-dessus du contenu */
+        }
+
+        /* Style pour le reste du contenu de la page */
         header {
             background-color: #444;
             color: #fff;
             text-align: center;
             padding: 20px;
+            margin-top: 60px; /* Décalage pour éviter que le contenu ne soit caché sous la barre */
         }
 
         section {
@@ -38,11 +52,16 @@
     </style>
 </head>
 <body>
+    <!-- La barre qui reste en haut pendant le défilement -->
+    <div class="top-bar">
+        <p>Barre fixe - Reste en haut lors du défilement</p>
+    </div>
+
     <header>
         <h1>Agence des Fins de Films</h1>
-        <br>
         <h2>Mission: Happy Endings – Une enquête sur les mystères des fins de films</h2>
     </header>
+
     <main>
         <section id="intro" class="section">
             <h3>Le Briefing de l'Agence</h3>
