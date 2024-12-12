@@ -6,7 +6,7 @@
     <title>Mission: Happy Endings</title>
     <link rel="stylesheet" href="style.css">
 
-    <!-- Ajout de Font Awesome pour les icônes -->
+    <!-- Adding Font Awesome for icons -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
 
     <style>
@@ -18,44 +18,44 @@
             color: #333;
         }
 
-        /* Barre fixe initialement transparente */
+        /* Initially transparent fixed bar */
         .top-bar {
-            background-color: #444; /* Définir comme transparent par défaut */
+            background-color: #444; /* Set to transparent by default */
             color: #fff;
             text-align: center;
-            padding: 8px 0; /* Plus fin */
+            padding: 8px 0; /* Thinner */
             position: fixed;
             top: 0;
             left: 0;
             width: 100%;
             z-index: 1000;
-            transition: background-color 0.3s ease-in-out; /* Transition douce pour le changement de couleur */
+            transition: background-color 0.3s ease-in-out; /* Smooth transition for background color change */
             display: flex;
-            justify-content: center; /* Centrer le texte et les éléments */
+            justify-content: center; /* Center text and elements */
             align-items: center;
         }
 
-        /* Logo à gauche de la barre */
+        /* Logo on the left side of the bar */
         .top-bar .logo {
             position: absolute;
-            left: 10px; /* Espace à gauche */
-            font-size: 24px; /* Taille de l'icône */
+            left: 10px; /* Left space */
+            font-size: 24px; /* Icon size */
         }
 
-        /* Style pour la barre quand on défile */
+        /* Style for the bar when scrolling */
         .top-bar.scrolled {
-            background-color: #333; /* Couleur de fond quand on défile */
+            background-color: #333; /* Background color when scrolling */
         }
 
-        /* Icône du menu à droite */
+        /* Menu icon on the right */
         .menu-icon {
             font-size: 30px;
             cursor: pointer;
             position: absolute;
-            right: 20px; /* Espace à droite */
+            right: 20px; /* Right space */
         }
 
-        /* Menu caché */
+        /* Hidden menu */
         .menu {
             display: none;
             position: fixed;
@@ -83,18 +83,18 @@
             font-size: 18px;
         }
 
-        /* Effet quand le menu est visible */
+        /* Effect when the menu is visible */
         .menu.show {
             display: block;
         }
 
-        /* Le reste du contenu de la page */
+        /* Rest of the page content */
         header {
             background-color: #444;
             color: #fff;
             text-align: center;
             padding: 20px;
-            margin-top: 60px; /* Décalage pour que le contenu ne soit pas caché sous la barre */
+            margin-top: 60px; /* Offset so that the content isn't hidden under the bar */
         }
 
         section {
@@ -116,97 +116,97 @@
 
     <div class="top-bar">
         <i class="fas fa-clapperboard logo"></i>
-        <p>Mission Ada : Done by the BigDada team</p>
+        <p>Mission Ada: Done by the BigDada team</p>
         <i class="fas fa-bars menu-icon" onclick="toggleMenu()"></i>
     </div>
 
-    <!-- Menu caché -->
+    <!-- Hidden menu -->
     <div id="menu" class="menu">
         <ul>
-            <li><a href="#intro">Le Briefing de l'Agence</a></li>
-            <li><a href="#dossier1">Dossier 001 – Les genres et leurs conventions suspectes</a></li>
-            <li><a href="#dossier2">Dossier 002 – Les époques et leurs secrets bien gardés</a></li>
-            <li><a href="#dossier3">Dossier 003 – Les complices : acteurs et réalisateurs</a></li>
-            <li><a href="#dossier4">Dossier 004 – Le mobile du crime : succès et argent</a></li>
-            <li><a href="#dossier5">Dossier 005 – Les différences culturelles</a></li>
-            <li><a href="#dossier6">Dossier 006 – Les franchises et les films longs</a></li>
-            <li><a href="#conclusion">L'épilogue</a></li>
+            <li><a href="#intro">Agency Briefing</a></li>
+            <li><a href="#dossier1">File 001 – Genres and Their Suspect Conventions</a></li>
+            <li><a href="#dossier2">File 002 – Eras and Their Well-Kept Secrets</a></li>
+            <li><a href="#dossier3">File 003 – The Accomplices: Actors and Directors</a></li>
+            <li><a href="#dossier4">File 004 – The Motive: Success and Money</a></li>
+            <li><a href="#dossier5">File 005 – Cultural Differences</a></li>
+            <li><a href="#dossier6">File 006 – Franchises and Long Movies</a></li>
+            <li><a href="#conclusion">The Epilogue</a></li>
         </ul>
     </div>
 
     <header>
-        <h1>Agence des Fins de Films</h1>
-        <h2>Mission: Happy Endings – Une enquête sur les mystères des fins de films</h2>
+        <h1>Film Endings Agency</h1>
+        <h2>Mission: Happy Endings – An Investigation into the Mysteries of Film Endings</h2>
     </header>
 
     <main>
         <section id="intro" class="section">
-            <h3>Le Briefing de l'Agence</h3>
-            <p>Agent Cinéphile, nous avons une mission critique pour vous...</p>
+            <h3>Agency Briefing</h3>
+            <p>Cinephile Agent, we have a critical mission for you...</p>
         </section>
 
         <section id="dossier1" class="section">
-            <h3>Dossier 001 – Les genres et leurs conventions suspectes</h3>
-            <p>Les genres sont des créatures d’habitude...</p>
+            <h3>File 001 – Genres and Their Suspect Conventions</h3>
+            <p>Genres are creatures of habit...</p>
         </section>
 
         <section id="dossier2" class="section">
-            <h3>Dossier 002 – Les époques et leurs secrets bien gardés</h3>
-            <p>En fouillant les archives des années 1950...</p>
+            <h3>File 002 – Eras and Their Well-Kept Secrets</h3>
+            <p>Digging through the archives of the 1950s...</p>
         </section>
 
         <section id="dossier3" class="section">
-            <h3>Dossier 003 – Les complices : acteurs et réalisateurs</h3>
-            <p>Ah, Christopher Nolan, un récidiviste des fins ambiguës...</p>
+            <h3>File 003 – The Accomplices: Actors and Directors</h3>
+            <p>Ah, Christopher Nolan, a repeat offender of ambiguous endings...</p>
         </section>
 
         <section id="dossier4" class="section">
-            <h3>Dossier 004 – Le mobile du crime : succès et argent</h3>
-            <p>Suivez l’argent. Les happy endings rapportent gros...</p>
+            <h3>File 004 – The Motive: Success and Money</h3>
+            <p>Follow the money. Happy endings make a lot of money...</p>
         </section>
 
         <section id="dossier5" class="section">
-            <h3>Dossier 005 – Les différences culturelles</h3>
-            <p>Bollywood adore ses fins heureuses...</p>
+            <h3>File 005 – Cultural Differences</h3>
+            <p>Bollywood loves its happy endings...</p>
         </section>
 
         <section id="dossier6" class="section">
-            <h3>Dossier 006 – Les franchises et les films longs</h3>
-            <p>Hollywood a un modus operandi : garder les spectateurs accrochés...</p>
+            <h3>File 006 – Franchises and Long Movies</h3>
+            <p>Hollywood has a modus operandi: keep the viewers hooked...</p>
         </section>
 
         <section id="conclusion" class="section">
-            <h3>L'épilogue</h3>
-            <p>Mission accomplie, Agent Cinéphile. Vous avez levé le voile...</p>
+            <h3>The Epilogue</h3>
+            <p>Mission accomplished, Cinephile Agent. You've uncovered the truth...</p>
         </section>
     </main>
 
     <script>
-        // Ajout d'un événement pour détecter quand la page est défilée
+        // Adding an event to detect when the page is scrolled
         window.onscroll = function() {
             var topBar = document.querySelector('.top-bar');
             if (window.scrollY > 0) {
-                topBar.classList.add('scrolled');  // Ajoute la classe .scrolled quand on fait défiler
+                topBar.classList.add('scrolled');  // Adds the .scrolled class when scrolling
             } else {
-                topBar.classList.remove('scrolled'); // Enlève la classe quand on est en haut de la page
+                topBar.classList.remove('scrolled'); // Removes the class when at the top of the page
             }
         };
 
-        // Fonction pour basculer l'affichage du menu
+        // Function to toggle the menu visibility
         function toggleMenu() {
             const menu = document.getElementById('menu');
             menu.classList.toggle('show');
         }
         
-        // Fonction pour faire défiler la page vers la section correspondante
+        // Function to scroll the page to the corresponding section
         document.querySelectorAll('.menu a').forEach(anchor => {
             anchor.addEventListener('click', function(e) {
                 e.preventDefault();
 
-                // Fermer le menu après clic
+                // Close the menu after clicking
                 document.getElementById('menu').classList.remove('show');
 
-                // Faire défiler la page vers la section cible
+                // Scroll the page to the target section
                 document.querySelector(this.getAttribute('href')).scrollIntoView({
                     behavior: 'smooth'
                 });
