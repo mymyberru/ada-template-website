@@ -72,13 +72,26 @@
     </style>
 </head>
 <body>
-    <!-- La barre qui reste en haut pendant le défilement -->
+
     <div class="top-bar">
-        <i class="fas fa-clapperboard logo"></i> <!-- Icône de clap de cinéma -->
-        <p>Mission Happy Ending</p>
-        <br>
-        <p>Done by the BigDada team</p>
-    </div>
+    <i class="fas fa-clapperboard logo"></i>
+    <p>Mission Ada : Done by the BigDada team</p>
+    <i class="fas fa-bars menu-icon" onclick="toggleMenu()"></i>
+</div>
+
+<!-- Menu caché -->
+<div id="menu" class="menu">
+    <ul>
+        <li><a href="#intro">Le Briefing de l'Agence</a></li>
+        <li><a href="#dossier1">Dossier 001 – Les genres et leurs conventions suspectes</a></li>
+        <li><a href="#dossier2">Dossier 002 – Les époques et leurs secrets bien gardés</a></li>
+        <li><a href="#dossier3">Dossier 003 – Les complices : acteurs et réalisateurs</a></li>
+        <li><a href="#dossier4">Dossier 004 – Le mobile du crime : succès et argent</a></li>
+        <li><a href="#dossier5">Dossier 005 – Les différences culturelles</a></li>
+        <li><a href="#dossier6">Dossier 006 – Les franchises et les films longs</a></li>
+        <li><a href="#conclusion">L'épilogue</a></li>
+    </ul>
+</div>
 
     <header>
         <h1>Agence des Fins de Films</h1>
@@ -138,5 +151,29 @@
             }
         };
     </script>
+    
+    </script>
+        // Fonction pour basculer l'affichage du menu
+        function toggleMenu() {
+            const menu = document.getElementById('menu');
+            menu.classList.toggle('show');
+        }
+        
+        // Fonction pour faire défiler la page vers la section correspondante
+        document.querySelectorAll('.menu a').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+        
+                // Fermer le menu après clic
+                document.getElementById('menu').classList.remove('show');
+        
+                // Faire défiler la page vers la section cible
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+
 </body>
 </html>
