@@ -9,7 +9,7 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
     // Load each sections 
-    loadSection('introduction', 'sections/introduction.html');
+    
     loadSection('files1', 'sections/files1.html');
     loadSection('files2', 'sections/files2.html');
     loadSection('conclusion', 'sections/conclusion.html');
