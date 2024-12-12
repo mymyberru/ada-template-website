@@ -1,138 +1,181 @@
-header {
-            background-color: #444;
-            color: #fff;
+body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+
+
+.header {
+            position: relative;
+            width: 100%;
+            height: 300px; /* Ajustez la hauteur du header selon vos besoins */
+            overflow: hidden;
+        }
+
+        .header-img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover; /* Garde l'image bien proportionnée */
+        }
+        
+        .header-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            background-color: rgba(0, 0, 0, 0.4); /* Assombrit légèrement l'image */
+            color: #fff; /* Texte en blanc pour contraste */
             text-align: center;
             padding: 20px;
-            margin-top: 60px; /* Offset so that the content isn't hidden under the bar */
-            top: 0; /* L'ancre en haut de la page */
-            left: 0;
-            right: 0;
-            z-index: 1000;
         }
-h1 {
-    margin-bottom: 10px; /* Ajout d'un espace entre le titre et le sous-titre */
-}
+        
+        .header-overlay h1 {
+            font-size: 3rem;
+            margin: 0;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6); /* Légère ombre au texte */
+        }
+        
+        .header-overlay p {
+            font-size: 1.5rem;
+            margin-top: 10px;
+        }
+        
+                
+        /* Rest of the page content */
+        
 
-h2 {
-    display: block; /* Assure que h2 occupe toute la ligne */
-}
+        /* Initially transparent fixed bar */
+        .top-bar {
+            background-color: transparent; /* Set to transparent by default */
+            color: #fff;
+            text-align: center;
+            padding: 8px 0; /* Thinner */
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 1000;
+            transition: background-color 0.3s ease-in-out; /* Smooth transition for background color change */
+            display: flex;
+            justify-content: center; /* Center text and elements */
+            align-items: center;
+        }
+
+        /* Logo on the left side of the bar */
+        .top-bar .logo {
+            position: absolute;
+            left: 20px; /* Left space */
+            font-size: 24px; /* Icon size */
+        }
+
+        /* Style for the bar when scrolling */
+        .top-bar.scrolled {
+            background-color: #333; /* Background color when scrolling */
+        }
+
+        /* Menu icon on the right */
+        .menu-icon {
+            font-size: 30px;
+            cursor: pointer;
+            position: absolute;
+            right: 20px; /* Right space */
+        }
+
+        /* Hidden menu */
+        .menu {
+            display: none;
+            position: fixed;
+            top: 0;
+            right: 0;
+            background-color: #444;
+            width: 200px;
+            height: 100%;
+            padding-top: 50px;
+            z-index: 2000;
+        }
+
+        .menu ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .menu li {
+            padding: 15px;
+            border-bottom: 1px solid #ddd;
+        }
+
+        .menu li a {
+            color: white;
+            text-decoration: none;
+            font-size: 18px;
+        }
+        .menu-overlay {
+            display: none; /* Caché par défaut */
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5); /* Overlay semi-transparent */
+            z-index: 1500; /* Juste en dessous du menu */
+        }
+
+        .menu.show + .menu-overlay {
+            display: block; /* Affiché lorsque le menu est ouvert */
+        }
 
 
-header h1 {
-  font-size: 3em; /* Taille du texte */
-  font-weight: bold; /* Texte en gras */
-  margin: 0;
-  padding: 0;
-  text-transform: uppercase; /* Texte en majuscules */
-  letter-spacing: 2px; /* Espacement entre les lettres */
-}
+        /* Effect when the menu is visible */
+        .menu.show {
+            display: block;
+        }
 
-header p {
-  font-size: 1.2em;
-  margin: 10px 0 0;
-  padding: 0;
-  color: #f0f0f0; /* Texte légèrement plus clair */
-  font-style: italic; /* Une touche italique pour le style */
-}
+        section {
+            padding: 20px;
+            background: #fff;
+            margin: 20px auto;
+            width: 80%;
+        }
 
+        h3 {
+            color: #444;
+        }
 
-/* Style général pour la page */
-body {
-  background-color: #fdf5e6; /* Beige clair */
-  color: #4a4a4a; /* Texte gris foncé pour un bon contraste */
-  font-family: 'Arial', sans-serif;
-  margin: 0;
-  padding: 0;
-  line-height: 1.6;
-}
-
-/* Style pour le contenu principal */
-main {
-  max-width: 800px;
-  margin: 50px auto; /* Centre le contenu horizontalement et ajoute un espace vertical */
-  padding: 20px;
-  background-color: transparent; /* Suppression du fond blanc */
-  text-align: center; /* Centrage du texte */
-}
-
-/* Style pour les titres */
-main h2 {
-  font-size: 2em;
-  color: #333333;
-  margin-bottom: 20px;
-}
-
-/* Style pour les paragraphes */
-main p {
-  font-size: 1.1em;
-  color: #4a4a4a;
-  margin-bottom: 20px;
-}
-
-/* Ajout d'un effet hover sur les liens */
-main a {
-  color: #8b4513; /* Brun doux */
-  text-decoration: none;
-  font-weight: bold;
-}
-
-main a:hover {
-  text-decoration: underline;
-  color: #654321; /* Brun foncé pour un effet de survol */
-}
-
-
-
-/* Style de la barre fixe */
-.top-bar {
-    background-color: rgba(0, 0, 0, 0.8);
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    padding: 10px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    color: #fff;
-    z-index: 100;
-}
-
-.menu-icon {
-    font-size: 30px;
-    cursor: pointer;
-}
-
-/* Menu caché */
-.menu {
-    display: none;
-    position: fixed;
-    top: 0;
-    right: 0;
-    background-color: #444;
-    width: 200px;
-    height: 100%;
-    padding-top: 50px;
-}
-
-.menu ul {
-    list-style: none;
-    padding: 0;
-}
-
-.menu li {
-    padding: 15px;
-    border-bottom: 1px solid #ddd;
-}
-
-.menu li a {
-    color: white;
-    text-decoration: none;
-    font-size: 18px;
-}
-
-/* Effet lorsque le menu est visible */
-.menu.show {
-    display: block;
-}
-
+        .team-row {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            flex-wrap: wrap; /* Permet de passer sur plusieurs lignes si l'écran est trop petit */
+            margin-top: 30px;
+        }
+        
+        .team-member {
+            text-align: center;
+            margin: 10px;
+            width: 180px; /* Taille de chaque membre */
+        }
+        
+        .team-member img {
+            width: 100%;
+            height: auto;
+            border-radius: 10px;
+            transition: transform 0.3s;
+        }
+        
+        .team-member img:hover {
+            transform: scale(1.1); /* Zoom sur survol */
+        }
+        
+        
+        h2 {
+            text-align: center;
+            margin-top: 50px;
+            font-size: 2rem;
+        }
