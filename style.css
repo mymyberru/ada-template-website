@@ -1,181 +1,178 @@
 body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #f4f4f4;
-            color: #333;
-        }
-
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4; /* Light gray background for the page */
+    color: #333; /* Dark text color for better readability */
+}
 
 .header {
-            position: relative;
-            width: 100%;
-            height: 300px; /* Ajustez la hauteur du header selon vos besoins */
-            overflow: hidden;
-        }
+    position: relative;
+    width: 100%;
+    height: 300px; /* Adjust the header height as needed */
+    overflow: hidden;
+}
 
-        .header-img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover; /* Garde l'image bien proportionnée */
-        }
+.header-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Keeps the image proportionate */
+}
         
-        .header-overlay {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            background-color: rgba(0, 0, 0, 0.4); /* Assombrit légèrement l'image */
-            color: #fff; /* Texte en blanc pour contraste */
-            text-align: center;
-            padding: 20px;
-        }
-        
-        .header-overlay h1 {
-            font-size: 3rem;
-            margin: 0;
-            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6); /* Légère ombre au texte */
-        }
-        
-        .header-overlay p {
-            font-size: 1.5rem;
-            margin-top: 10px;
-        }
-        
+.header-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.4); /* Slightly darkens the image */
+    color: #fff; /* White text for contrast */
+    text-align: center;
+    padding: 20px;
+}
+
+.header-overlay h1 {
+    font-size: 3rem;
+    margin: 0;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6); /* Subtle shadow for the text */
+}
+
+.header-overlay p {
+    font-size: 1.5rem;
+    margin-top: 10px;
+}
                 
-        /* Rest of the page content */
-        
+/* Rest of the page content */
 
-        /* Initially transparent fixed bar */
-        .top-bar {
-            background-color: transparent; /* Set to transparent by default */
-            color: #fff;
-            text-align: center;
-            padding: 8px 0; /* Thinner */
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            z-index: 1000;
-            transition: background-color 0.3s ease-in-out; /* Smooth transition for background color change */
-            display: flex;
-            justify-content: center; /* Center text and elements */
-            align-items: center;
-        }
+/* Initially transparent fixed bar */
+.top-bar {
+    background-color: transparent; /* Set to transparent by default */
+    color: #fff;
+    text-align: center;
+    padding: 8px 0; /* Thinner padding */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    transition: background-color 0.3s ease-in-out; /* Smooth transition for background color change */
+    display: flex;
+    justify-content: center; /* Center the text and elements */
+    align-items: center;
+}
 
-        /* Logo on the left side of the bar */
-        .top-bar .logo {
-            position: absolute;
-            left: 20px; /* Left space */
-            font-size: 24px; /* Icon size */
-        }
+/* Logo on the left side of the bar */
+.top-bar .logo {
+    position: absolute;
+    left: 20px; /* Space from the left */
+    font-size: 24px; /* Logo size */
+}
 
-        /* Style for the bar when scrolling */
-        .top-bar.scrolled {
-            background-color: #333; /* Background color when scrolling */
-        }
+/* Style for the bar when scrolling */
+.top-bar.scrolled {
+    background-color: #333; /* Background color when scrolling */
+}
 
-        /* Menu icon on the right */
-        .menu-icon {
-            font-size: 30px;
-            cursor: pointer;
-            position: absolute;
-            right: 20px; /* Right space */
-        }
+/* Menu icon on the right */
+.menu-icon {
+    font-size: 30px;
+    cursor: pointer;
+    position: absolute;
+    right: 20px; /* Space from the right */
+}
 
-        /* Hidden menu */
-        .menu {
-            display: none;
-            position: fixed;
-            top: 0;
-            right: 0;
-            background-color: #444;
-            width: 200px;
-            height: 100%;
-            padding-top: 50px;
-            z-index: 2000;
-        }
+/* Hidden menu */
+.menu {
+    display: none;
+    position: fixed;
+    top: 0;
+    right: 0;
+    background-color: #444;
+    width: 200px;
+    height: 100%;
+    padding-top: 50px;
+    z-index: 2000;
+}
 
-        .menu ul {
-            list-style: none;
-            padding: 0;
-        }
+.menu ul {
+    list-style: none;
+    padding: 0;
+}
 
-        .menu li {
-            padding: 15px;
-            border-bottom: 1px solid #ddd;
-        }
+.menu li {
+    padding: 15px;
+    border-bottom: 1px solid #ddd;
+}
 
-        .menu li a {
-            color: white;
-            text-decoration: none;
-            font-size: 18px;
-        }
-        .menu-overlay {
-            display: none; /* Caché par défaut */
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background-color: rgba(0, 0, 0, 0.5); /* Overlay semi-transparent */
-            z-index: 1500; /* Juste en dessous du menu */
-        }
+.menu li a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+}
 
-        .menu.show + .menu-overlay {
-            display: block; /* Affiché lorsque le menu est ouvert */
-        }
+/* Semi-transparent overlay for the menu */
+.menu-overlay {
+    display: none; /* Hidden by default */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent overlay */
+    z-index: 1500; /* Just below the menu */
+}
 
+.menu.show + .menu-overlay {
+    display: block; /* Show the overlay when the menu is open */
+}
 
-        /* Effect when the menu is visible */
-        .menu.show {
-            display: block;
-        }
+/* Effect when the menu is visible */
+.menu.show {
+    display: block;
+}
 
-        section {
-            padding: 20px;
-            background: #fff;
-            margin: 20px auto;
-            width: 80%;
-        }
+section {
+    padding: 20px;
+    background: #fff;
+    margin: 20px auto;
+    width: 80%;
+}
 
-        h3 {
-            color: #444;
-        }
+h3 {
+    color: #444;
+}
 
-        .team-row {
-            display: flex;
-            justify-content: space-around;
-            align-items: center;
-            flex-wrap: wrap; /* Permet de passer sur plusieurs lignes si l'écran est trop petit */
-            margin-top: 30px;
-        }
-        
-        .team-member {
-            text-align: center;
-            margin: 10px;
-            width: 180px; /* Taille de chaque membre */
-        }
-        
-        .team-member img {
-            width: 100%;
-            height: auto;
-            border-radius: 10px;
-            transition: transform 0.3s;
-        }
-        
-        .team-member img:hover {
-            transform: scale(1.1); /* Zoom sur survol */
-        }
-        
-        
-        h2 {
-            text-align: center;
-            margin-top: 50px;
-            font-size: 2rem;
-        }
+.team-row {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap; /* Allows wrapping to multiple lines if the screen is too small */
+    margin-top: 30px;
+}
+
+.team-member {
+    text-align: center;
+    margin: 10px;
+    width: 180px; /* Size of each team member */
+}
+
+.team-member img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    transition: transform 0.3s;
+}
+
+.team-member img:hover {
+    transform: scale(1.1); /* Zoom effect on hover */
+}
+
+h2 {
+    text-align: center;
+    margin-top: 50px;
+    font-size: 2rem;
+}
