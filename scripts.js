@@ -49,8 +49,5 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
     loadSection('introduction', 'sections/introduction.html');
-    loadSection('chapitre1', 'sections/chapitre1.html');
-    loadSection('chapitre2', 'sections/chapitre2.html');
-    loadSection('conclusion', 'sections/conclusion.html');
 });
 
