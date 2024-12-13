@@ -38,3 +38,19 @@ document.querySelectorAll('.menu a').forEach(link => {
         overlay.style.display = 'none';
     });
 });
+
+
+document.addEventListener("DOMContentLoaded", function () {
+    function loadSection(sectionId, filePath) {
+        fetch(filePath)
+            .then(response => response.text())
+            .then(data => document.getElementById(sectionId).innerHTML = data)
+            .catch(error => console.log('Erreur de chargement:', error));
+    }
+
+    loadSection('introduction', 'sections/introduction.html');
+    loadSection('chapitre1', 'sections/chapitre1.html');
+    loadSection('chapitre2', 'sections/chapitre2.html');
+    loadSection('conclusion', 'sections/conclusion.html');
+});
+
