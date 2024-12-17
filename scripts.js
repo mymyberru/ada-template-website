@@ -49,5 +49,11 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
     loadSection('introduction', 'sections/introduction.html');
+    loadSection('file006', 'sections/file001.html');
+    loadSection('file006', 'sections/file002.html');
+    loadSection('file006', 'sections/file003.html');
+    loadSection('file006', 'sections/file004.html');
+    loadSection('file006', 'sections/file005.html');
+    loadSection('file006', 'sections/file006.html');
 });
 

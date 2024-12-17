@@ -92,7 +92,7 @@ body {
     top: 0;
     right: 0;
     background-color: #444;
-    width: 200px;
+    width: 500px;
     height: 100%;
     padding-top: 50px;
     z-index: 2000;
@@ -136,10 +136,11 @@ body {
 }
 
 section {
-    padding: 20px;
+    padding: 60px;
     background: #fff;
-    margin: 20px auto;
-    width: 80%;
+    margin: 40px auto;
+    border-radius: 20px;
+    width: 60%;
 }
 
 h3 {
