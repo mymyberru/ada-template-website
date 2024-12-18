@@ -49,11 +49,35 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
     loadSection('introduction', 'sections/introduction.html');
-    loadSection('file006', 'sections/file001.html');
-    loadSection('file006', 'sections/file002.html');
-    loadSection('file006', 'sections/file003.html');
-    loadSection('file006', 'sections/file004.html');
-    loadSection('file006', 'sections/file005.html');
-    loadSection('file006', 'sections/file006.html');
+    
 });
+
+let currentPage = 1;
+const totalPages = 2; 
+
+
+function changePage(direction) {
+    currentPage += direction;
+    
+    // Si la page actuelle dépasse les limites, on recommence depuis le début ou on va à la fin
+    if (currentPage < 1) {
+        currentPage = totalPages;
+    } else if (currentPage > totalPages) {
+        currentPage = 1;
+    }
+    
+    // Cache toutes les pages et affiche la page correspondante
+    for (let i = 1; i <= totalPages; i++) {
+        document.getElementById('page' + i).style.display = 'none';
+    }
+    
+    document.getElementById('page' + currentPage).style.display = 'flex';
+}
+
+// Initialiser la première page
+document.addEventListener('DOMContentLoaded', function() {
+    changePage(0);
+});
+
+
 
